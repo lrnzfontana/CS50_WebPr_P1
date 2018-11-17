@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Results
+{% endblock %}
+
+{% block body1 %}
+<h2 class = 'display-4'>Results:</h2>
+<p class = 'lead'>Click on a book to see its reviews!</p>
+
+{% for res in results %}
+<p>
+  <div class = 'lead'><a href="/book/{{ res['isbn'] }}">{{ res['title'] }}</a></div>
+  <span class = 'author-desc'><span style = 'font-weight:bold;'>{{ res['author'] }}</span> - <span class="ml-1"> <span style = 'font-weight:bold;'>ISBN: </span>{{ res['isbn'] }}</span> </span>
+</p>
+{% endfor %}
+
+{% endblock %}

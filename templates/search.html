@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Search Book
+{% endblock %}
+
+{% block body1 %}
+<h2 class = 'display-4'>Welcome {{uname}}! Search for a Book!</h2>
+<p class = 'lead'>We got 5000 of them</p>
+
+<form method="post">
+  <div class="card-body row no-gutters align-items-center justify-content-center">
+  <div class="col-auto mr-1"><i class="fas fa-search h4 text-body"></i></div>
+  <div class="col-6">
+    <input type="search" name="searcharg" placeholder="Book Title, Author Name or ISBN" class="form-control">
+  </div>
+  <div class="col-auto">
+  <button type="submit" class="btn btn-primary">Search</button>
+  </div>
+  </div>
+  </form>
+
+{% endblock %}

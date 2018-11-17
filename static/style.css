@@ -1,0 +1,24 @@
+.icon-right {
+  margin-right: 6px !important;
+}
+
+h1 {
+  color: red;
+}
+
+.author-desc {
+  white-space:nowrap;
+  padding-left: 5px;
+}
+
+.rating-down {
+  white-space:nowrap;
+}
+
+.review-box {
+  border-color: orange !important;
+}
+
+/* .container{
+        max-width: 970px;
+    } */
