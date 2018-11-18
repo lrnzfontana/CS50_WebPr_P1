@@ -3,6 +3,6 @@ Flask-Session
 psycopg2
 SQLAlchemy
 
-werkzeug.security
+Werkzeug
 requests
 functools
