@@ -48,8 +48,8 @@ def result(sarg):
     query = text(query.format(sarg))
     results = db.execute(query).fetchall()
 
-    if len(results) == 0:
-        return render_template("error.html", message = 'No results! Please try again')
+    # if len(results) == 0:
+    #     return render_template("error.html", message = 'No results! Please try again')
 
     return render_template("results.html", results = results)
 
