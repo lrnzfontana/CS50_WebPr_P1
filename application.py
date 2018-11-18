@@ -45,11 +45,11 @@ def result(sarg):
 
     # Get results from books
     query = f"SELECT isbn, title, author, year FROM books WHERE isbn LIKE \'{sarg}%\' OR lower(author) LIKE \'%{sarg}%\' OR lower(title) LIKE \'%{sarg}%\' ORDER BY author, title"
-    query = text(query.format(sarg))
+    query = text(query)
     results = db.execute(query).fetchall()
 
-    # if len(results) == 0:
-    #     return render_template("error.html", message = 'No results! Please try again')
+    if len(results) == 0:
+        return render_template("error.html", message = 'No results! Please try again')
 
     return render_template("results.html", results = results)
 
